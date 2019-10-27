@@ -61,6 +61,11 @@
 ![Our Mindmaps and Brainstorming](BRAINSTORM/mindmap.jpg)
 ![Our Mindmaps and Brainstorming](BRAINSTORM/mindmap2.jpg)
 
+#### Map Possibilities
+- Tower battle(?) 
+	- Start at the bottom to top
+- Go wherever you like
+		- Open world with scaling for enemies so player doesn’t become too weak or too strong in certain areas
 
 #### Screens
 ##### Radial Subscreen
@@ -73,12 +78,8 @@
 
 If we have time to allow for color combos, players will be forced to choose 3 colors, where 1 of them is black/white and the other two are “whatever” combo they choose
 
+
 ![Legend of Zelda : Skyward Sword Radial Screen Example](BRAINSTORM/radialscreen1.jpeg)
 ![Radial Color Wheel](BRAINSTORM/radialscreen2.jpg)
 
-#### Map Possibilities
-- Tower battle(?) 
-	- Start at the bottom to top
-- Go wherever you like
-		- Open world with scaling for enemies so player doesn’t become too weak or too strong in certain areas
 
