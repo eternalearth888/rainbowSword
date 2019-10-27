@@ -72,6 +72,7 @@
 - Allow the player to choose one color for now 
 
 If we have time to allow for color combos, players will be forced to choose 3 colors, where 1 of them is black/white and the other two are “whatever” combo they choose
+
 ![Legend of Zelda : Skyward Sword Radial Screen Example](BRAINSTORM/radialscreen1.jpeg)
 ![Radial Color Wheel](BRAINSTORM/radialscreen2.jpg)
 
