@@ -1,6 +1,6 @@
 # Chroma Blade
 
-## GAME IDEA
+## GAME IDEA!
 
 #### Game Name
 Chroma Blade
