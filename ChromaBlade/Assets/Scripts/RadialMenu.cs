@@ -21,7 +21,7 @@ public class RadialMenu : MonoBehaviour
             float xPos = Mathf.Sin(theta);
             float yPos = Mathf.Cos(theta);
 
-            newButton.transform.localPosition = new Vector3(xPos, yPos, 0f) * 100f;
+            newButton.transform.localPosition = new Vector3(xPos, yPos, 0f) * 150f;
 
             // set the color to what you have it set in unity
             newButton.circle.color = obj.options[i].color;
