@@ -227,24 +227,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   options:
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-    title: 
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-    title: 
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-    title: 
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-    title: 
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-    title: 
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    sprite: {fileID: 0}
-    title: 
+  - color: {r: 1, g: 0, b: 0, a: 0}
+    sprite: {fileID: 21300000, guid: 0a7635e4136fd414789b86372746d912, type: 3}
+    title: Sai
+  - color: {r: 1, g: 0.5464047, b: 0, a: 0}
+    sprite: {fileID: 21300000, guid: 565ebc3539e7f4048bd8c68751f9003f, type: 3}
+    title: Katana
+  - color: {r: 0.95043623, g: 1, b: 0, a: 0}
+    sprite: {fileID: 21300000, guid: d19af4951950d42c2857acb75153123c, type: 3}
+    title: Glaive
+  - color: {r: 0, g: 1, b: 0.12542915, a: 0}
+    sprite: {fileID: 21300000, guid: 54ff634ede4f144c4a541151fac0adf0, type: 3}
+    title: Sickle
+  - color: {r: 0, g: 0.167027, b: 1, a: 0}
+    sprite: {fileID: 21300000, guid: 58d6bd398dd734962bd5d08da893d53c, type: 3}
+    title: Two Handed
+  - color: {r: 0.48849308, g: 0.07075471, b: 1, a: 0}
+    sprite: {fileID: 21300000, guid: f129cc791d5ca4d3bb6061654aa22cd3, type: 3}
+    title: Umbrella
 --- !u!1 &731411083
 GameObject:
   m_ObjectHideFlags: 0

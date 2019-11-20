@@ -17,6 +17,6 @@ public class Interactable : MonoBehaviour
     private void OnMouseDown()
     {
         // Tell the Canvas to spawn
-        RadialMenuSpawner.ins.SpawnMenu();
+        RadialMenuSpawner.ins.SpawnMenu(this);
     }
 }
