@@ -13,13 +13,19 @@ public class RadialButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     // which cirlce is selected?
     public RadialMenu myMenu;
 
+    // color for selection
+    Color defaultColor;
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         myMenu.selected = this;
+        defaultColor = circle.color;
+        circle.color = Color.white;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         myMenu.selected = null;
+        circle.color = defaultColor;
     }
 }
