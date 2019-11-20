@@ -1,3 +1,21 @@
+### 11/20/2019
+# Progress Update
+
+## What we've got done
+- A sword model, that can change color based on input
+- A radial menu that tracks the mouse location 
+- Our title screen
+- Character helmet is modeled in Blender
+
+## Our next steps
+- Integrate radial menu with sword
+- Finish our character's model, move into Unity
+- Start work on animations (character movement, sword swinging)
+- Create a basic level to progress through
+- Create VERY basic enemies to fight, include basic AI
+
+## Moving Forward
+Our primary overarching goal to achieve by the end of break is to have some semblance of a playable game: movement, attacking, enemies to attack, and a world to attack them in. So far, we've been focused on creating the radial menu, the rainbow sword, and the main character's helmet design. We started out with these mostly because we thought them to be the most important parts of our game's core idea, but it's clear that there's still a game to be made. We're excited to have a playable game come December!
 
 ### 11/6/2019
 # Bo’s Key Features
