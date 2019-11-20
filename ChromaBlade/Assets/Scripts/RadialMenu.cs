@@ -14,4 +14,12 @@ public class RadialMenu : MonoBehaviour
         newButton.transform.SetParent(transform, false);
         newButton.transform.localPosition = new Vector3(0f, 100f, 0f);
     }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
