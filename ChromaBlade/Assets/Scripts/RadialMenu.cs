@@ -41,6 +41,12 @@ public class RadialMenu : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0))
         {
+            //PUT BUTTON ACTIONS IN HERE IF THEY DESELECT ON AN OPTION
+            if (selected)
+            {
+                Debug.Log(selected.title + " was selected");
+            }
+            // Otherwise exit menu
             Destroy(gameObject);
         }
     }

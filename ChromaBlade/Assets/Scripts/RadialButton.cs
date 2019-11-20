@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class RadialButton : MonoBehaviour
+public class RadialButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Image circle;
     public Image icon;
@@ -12,15 +13,13 @@ public class RadialButton : MonoBehaviour
     // which cirlce is selected?
     public RadialMenu myMenu;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-            
+        myMenu.selected = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        
+        myMenu.selected = null;
     }
 }
