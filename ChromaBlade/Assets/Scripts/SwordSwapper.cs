@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using RadialButton;
 
 public class SwordSwapper : MonoBehaviour
 {
+    // MOVE THE CONTENTS OF THIS FILE TO RadialMenu.cs !!!
+    
     // The "prefabs" array contains all of the sword prefabs to be used, stored in order as follows:
     // 0 = red
     // 1 = orange 
@@ -14,6 +17,8 @@ public class SwordSwapper : MonoBehaviour
     // 6 = black
     public GameObject[] prefabs;
     private GameObject newSword;
+
+    //private int selectedSword;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,7 @@ public class SwordSwapper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         // The Update code listens for a sword swap input, then destroys the sword's existing prefab and replaces it 
         if(Input.GetKeyDown("1")){
             Destroy(newSword);
