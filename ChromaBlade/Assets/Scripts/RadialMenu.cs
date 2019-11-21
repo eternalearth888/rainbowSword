@@ -7,6 +7,7 @@ public class RadialMenu : MonoBehaviour
     public RadialButton buttonPrefab;
     public RadialButton selected;
 
+
     public void SpawnButtons(Interactable obj)
     {
         for (int i = 0; i < obj.options.Length; i++)
