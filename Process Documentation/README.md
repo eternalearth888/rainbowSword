@@ -26,6 +26,7 @@ Has a majestic cape! Cape acts as “moral tracker”
 Space Paladin
 Weird-shaped helmet (thinking Crescent for now, may change)
 Wields the Chroma Blade
+![helmet]("helmet 2019_11_20.png")
 
 ## Dominant Traits:
 Stoic: Character is silent and somewhat lacking emotion, rarely expressing happiness, fear, doubt or regret. Character remains stoic in the face of the dangers they encounter. 
