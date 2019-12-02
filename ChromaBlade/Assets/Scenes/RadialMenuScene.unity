@@ -210,7 +210,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 988063702}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -424,6 +425,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPrefab: {fileID: 2783444777576516694, guid: acfc97ee4f3764e969cf7cb3d95a3f55,
     type: 3}
+--- !u!1 &988063701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988063702}
+  - component: {fileID: 988063703}
+  m_Layer: 0
+  m_Name: Sword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &988063702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988063701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.65, y: 0, z: 0.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 685740520}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988063703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988063701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca40bfd31f3e8cc4abb18d041ee8b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 3503440920778801889, guid: 75d0973dbe13e8e44b7e5cfec20af86f, type: 3}
+  - {fileID: 164243525221412510, guid: db4727e39f3ec554ebf8f83f73b35d18, type: 3}
+  - {fileID: 500976743053804787, guid: 691f60a5077b7f448933450563278c1d, type: 3}
+  - {fileID: 6037676412522010421, guid: 091781b897e8dd942b3466f1ffd46ce5, type: 3}
+  - {fileID: 2414127595162555524, guid: c491967d4bce6554aa09304c3644a583, type: 3}
+  - {fileID: 2799940013085538027, guid: ac5760e0f9f89fb48a9332bb7ee7c416, type: 3}
+  - {fileID: 6079057701399963431, guid: 2710a8fb531f0194991724e788726dfd, type: 3}
 --- !u!1 &1152817684
 GameObject:
   m_ObjectHideFlags: 0

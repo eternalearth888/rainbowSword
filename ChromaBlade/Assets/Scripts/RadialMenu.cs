@@ -7,7 +7,7 @@ public class RadialMenu : MonoBehaviour
     public RadialButton buttonPrefab;
     public RadialButton selected;
 
-
+    
     public void SpawnButtons(Interactable obj)
     {
         for (int i = 0; i < obj.options.Length; i++)
@@ -46,6 +46,24 @@ public class RadialMenu : MonoBehaviour
             if (selected)
             {
                 Debug.Log(selected.title + " was selected");
+                if(selected.title == "Red"){
+                    SwordSwapper.selectedSword = 0;
+                }
+                if(selected.title == "Orange"){
+                    SwordSwapper.selectedSword = 1;
+                }
+                if(selected.title == "Yellow"){
+                    SwordSwapper.selectedSword = 2;
+                }
+                if(selected.title == "Green"){
+                    SwordSwapper.selectedSword = 3;
+                }
+                if(selected.title == "Blue"){
+                    SwordSwapper.selectedSword = 4;
+                }
+                if(selected.title == "Purple"){
+                    SwordSwapper.selectedSword = 5;
+                }
             }
             // Otherwise exit menu
             Destroy(gameObject);

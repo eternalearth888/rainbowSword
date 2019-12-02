@@ -17,42 +17,52 @@ public class SwordSwapper : MonoBehaviour
     // 6 = black
     public GameObject[] prefabs;
     private GameObject newSword;
-
-    //private int selectedSword;
+    
+    public static int selectedSword = 6;
+    private int prevSel;
     
     // Start is called before the first frame update
     void Start()
     {
         //starts the game with a black sword
         newSword = Instantiate(prefabs[6], transform.position, Quaternion.identity) as GameObject;
+        prevSel = selectedSword;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(selectedSword != prevSel){
+            swapper();
+            prevSel = selectedSword;
+        }
         
+    }
+
+
+    void swapper(){
         // The Update code listens for a sword swap input, then destroys the sword's existing prefab and replaces it 
-        if(Input.GetKeyDown("1")){
+        if(selectedSword == 0){
             Destroy(newSword);
             newSword = Instantiate(prefabs[0], transform.position, Quaternion.identity) as GameObject;
         }
-        if(Input.GetKeyDown("2")){
+        if(selectedSword == 1){
             Destroy(newSword);
             newSword = Instantiate(prefabs[1], transform.position, Quaternion.identity) as GameObject;
         }
-        if(Input.GetKeyDown("3")){
+        if(selectedSword == 2){
             Destroy(newSword);
             newSword = Instantiate(prefabs[2], transform.position, Quaternion.identity) as GameObject;
         }
-        if(Input.GetKeyDown("4")){
+        if(selectedSword == 3){
             Destroy(newSword);
             newSword = Instantiate(prefabs[3], transform.position, Quaternion.identity) as GameObject;
         }
-        if(Input.GetKeyDown("5")){
+        if(selectedSword == 4){
             Destroy(newSword);
             newSword = Instantiate(prefabs[4], transform.position, Quaternion.identity) as GameObject;
         }
-        if(Input.GetKeyDown("6")){
+        if(selectedSword == 5){
             Destroy(newSword);
             newSword = Instantiate(prefabs[5], transform.position, Quaternion.identity) as GameObject;
         }
