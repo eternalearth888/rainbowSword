@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/RadialMenuScene.unity
-=======
-- path: Assets/Scenes/TitleScene.unity
->>>>>>> master
+- path: Assets/Scenes/WorldScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
