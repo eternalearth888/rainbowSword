@@ -65,6 +65,8 @@ Bo is essentially a “blank slate,” and their behavior in the game will alter
 - slashing sounds for sword
 - Player won't speak
 - walking sound will change depending on the terrain being walked on (dirt, grass, snow, etc.)
+- sword change will have activation sound
+- each sword will hum at a different frequency based on the color
 
 ## Enemy Sounds
 - soft tinkling crystal sound when moving
@@ -81,3 +83,4 @@ Bo is essentially a “blank slate,” and their behavior in the game will alter
 - original pieces made in Logic Pro
 - each piece will be 1 minute or less and played on loop depending on location
 - needs to be quite and less complex so that player can hear monsters
+- starting with 2 pieces, may create more depending on game progress and interactions
