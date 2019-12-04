@@ -44,8 +44,40 @@ Bo is essentially a “blank slate,” and their behavior in the game will alter
 - Flashy and rewarding combat
 - Color switching is fun on its own, and adds depth & variety to combat, allows players to defeat enemies in their own unique way
 - Rewarding collection of colors
+
 ## Core Values
 - Experimentation & variety
 - Morals / decision making
 - Offense vs Defense
 
+
+### 12/04/19
+# Sound
+
+## General
+- AIFF files preferred
+- WAV files when AIFF not available
+- regularly played files (footsteps, wind, etc.) kept under 3 MB
+- no device vibration
+- 44.1 kHz minimum for audio quality
+
+## Player Character
+- slashing sounds for sword
+- Player won't speak
+- walking sound will change depending on the terrain being walked on (dirt, grass, snow, etc.)
+
+## Enemy Sounds
+- soft tinkling crystal sound when moving
+- cracking glass sound when hit
+- glass shatter sound when killed
+- soft crystal sound will be audio feedback to alert player that there's an enemy nearby
+- regular enemies won't speak nor grunt
+
+## Ambient Sound and Music
+- slow fluctuation of wind sounds depending on location
+- dripping water - dependent on if we decide to do an underground level or not
+
+## Soundtrack
+- original pieces made in Logic Pro
+- each piece will be 1 minute or less and played on loop depending on location
+- needs to be quite and less complex so that player can hear monsters
