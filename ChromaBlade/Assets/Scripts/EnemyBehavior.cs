@@ -10,8 +10,10 @@ public class EnemyBehavior : MonoBehaviour
     public float MaxDist;
     public float MinDist;
     private Animator anim;
-    private bool isWalk;
-    private float walkTimer;
+    
+    private float attackCooldown = 4f;
+    public float attackDelay = 4f;
+    public float hitRange = 5f;
 
     
     
@@ -27,28 +29,35 @@ public class EnemyBehavior : MonoBehaviour
         playerPos = playerObj.transform.position;
         transform.LookAt(playerPos);
 
-        AnimatorClipInfo[] ci;
-        ci = anim.GetCurrentAnimatorClipInfo(0);
-
-        if(Vector3.Distance(transform.position, playerPos) >= MinDist){
+        if(Vector3.Distance(transform.position, playerPos) >= MinDist && attackCooldown >= attackDelay){
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
             //activate walking animation here
-            if (ci[0].clip.name != "Run Forward In Place"){
-                // Avoid any reload.
-                Debug.Log(ci[0].clip.name);
-                walkAnim();
-            }
+            anim.CrossFade("Run Forward In Place", 0);
+            //Debug.Log("Walking");
         }
-
-        if(Vector3.Distance(transform.position, playerPos) <= MaxDist){
+        else if(Vector3.Distance(transform.position, playerPos) <= MaxDist){
             //call attacking code here
-            //anim.CrossFade("Idle", 0);
+            if(attackCooldown >= attackDelay){
+                attackCooldown = 0f;
+                anim.CrossFade("Stab Attack", 0);
+                Attack();
+                //Debug.Log("Attacking");
+            }
+            else{
+                attackCooldown += Time.deltaTime;
+            }
         }
     }
 
-    void walkAnim(){
-        //anim.StopPlayback();
-        anim.CrossFade("Run Forward In Place", 0);
+    void Attack(){
+        //make attack attempt here
+        if(Vector3.Distance(transform.position, playerPos) <= hitRange){
+            // call damage functions in PlayerStats here
+            
+        }
+        else{
+            // "miss" case, remove this else statement if not needed
+        }
         
     }
 }
