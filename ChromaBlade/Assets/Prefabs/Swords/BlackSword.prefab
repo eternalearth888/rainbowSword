@@ -9526,13 +9526,14 @@ GameObject:
   - component: {fileID: 6077186037499293063}
   - component: {fileID: 6065869999852524447}
   - component: {fileID: 6056124525749097225}
+  - component: {fileID: 7599048747840110229}
   m_Layer: 0
   m_Name: BlackSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6077186037499293063
 Transform:
   m_ObjectHideFlags: 0
@@ -9596,6 +9597,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7599048747840110229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079057701399963431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca40bfd31f3e8cc4abb18d041ee8b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs: []
 --- !u!1 &6079082688341351397
 GameObject:
   m_ObjectHideFlags: 0
