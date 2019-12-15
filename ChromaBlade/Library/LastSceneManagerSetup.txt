@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/SpaceKnight/Demo_Scene_Knight.unity
-=======
-- path: Assets/Scenes/GameScene.unity
->>>>>>> master
+- path: Assets/Scenes/WorldScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
