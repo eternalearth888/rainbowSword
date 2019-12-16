@@ -29,13 +29,14 @@ public class EnemyBehavior : MonoBehaviour
         playerPos = playerObj.transform.position;
         transform.LookAt(playerPos);
 
-        if(Vector3.Distance(transform.position, playerPos) >= MinDist && attackCooldown >= attackDelay){
+        if(Vector3.Distance(transform.position, playerPos) >= MinDist){
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
             //activate walking animation here
-            anim.CrossFade("Run Forward In Place", 0);
+            anim.SetBool("Run Forward", true);
             //Debug.Log("Walking");
         }
-        else if(Vector3.Distance(transform.position, playerPos) <= MaxDist){
+        if(Vector3.Distance(transform.position, playerPos) <= MaxDist){
+            anim.SetBool("Run Forward", false);
             //call attacking code here
             if(attackCooldown >= attackDelay){
                 attackCooldown = 0f;
@@ -43,10 +44,8 @@ public class EnemyBehavior : MonoBehaviour
                 Attack();
                 //Debug.Log("Attacking");
             }
-            else{
-                attackCooldown += Time.deltaTime;
-            }
         }
+        attackCooldown += Time.deltaTime;
     }
 
     void Attack(){
@@ -55,9 +54,9 @@ public class EnemyBehavior : MonoBehaviour
             // call damage functions in PlayerStats here
             
         }
-        else{
-            // "miss" case, remove this else statement if not needed
-        }
+        // else{
+        //     // "miss" case, remove this else statement if not needed
+        // }
         
     }
 }
