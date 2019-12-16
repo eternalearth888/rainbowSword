@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private Vector3 currentPos;
     private Vector3 lastPos;
 
+    public static bool isAttacking = false;
+    private float attackTimer = 1f;
+
     
     
     // Start is called before the first frame update
@@ -61,27 +64,46 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
+        if(isAttacking){
+            if(attackTimer <= 0f){
+                isAttacking = false;
+            }
+        }
+        attackTimer -= Time.deltaTime;
         lastPos = currentPos;
     }
 
     void SwordSwing(){
+        
         if(SwordSwapper.selectedSword == 0){
             anim.CrossFade("2Hand-Sword-Attack2", 0);
+            isAttacking = true;
+            attackTimer = 1.6f;
         }
         if(SwordSwapper.selectedSword == 1){
             anim.CrossFade("2Hand-Sword-Attack1", 0);
+            isAttacking = true;
+            attackTimer = 0.3f;
         }
         if(SwordSwapper.selectedSword == 2){
             anim.CrossFade("2Hand-Sword-Attack3", 0);
+            isAttacking = true;
+            attackTimer = 1.2f;
         }
         if(SwordSwapper.selectedSword == 3){
             anim.CrossFade("2Hand-Sword-Attack6", 0);
+            isAttacking = true;
+            attackTimer = 1.2f;
         }
         if(SwordSwapper.selectedSword == 4){
             anim.CrossFade("2Hand-Sword-Attack4", 0);
+            isAttacking = true;
+            attackTimer = 1.2f;
         }
         if(SwordSwapper.selectedSword == 5){
             anim.CrossFade("2Hand-Sword-Attack5", 0);
+            isAttacking = true;
+            attackTimer = 1.2f;
         }
     }
 
