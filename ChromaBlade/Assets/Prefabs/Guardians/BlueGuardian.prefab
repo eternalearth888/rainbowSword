@@ -257,6 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4630308922926411313}
   - component: {fileID: 4630308922929883569}
+  - component: {fileID: 8288706041663739012}
   m_Layer: 0
   m_Name: Ice Guardian
   m_TagString: Untagged
@@ -351,6 +352,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.2403611, y: -0.048163027, z: 0.010384858}
     m_Extent: {x: 1.7402847, y: 0.5648663, z: 1.6128085}
   m_DirtyAABB: 0
+--- !u!136 &8288706041663739012
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630308922926648369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.8271985
+  m_Height: 1.992523
+  m_Direction: 1
+  m_Center: {x: -0.010384794, y: 0.025070755, z: 1.8024049}
 --- !u!1 &4630308922926649813
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,7 +693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5ef7ceb4054304a81d04e9e67ae502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 0}
+  playerObj: {fileID: 1489205041637245975, guid: 3bfe405578625b948a3745a5bb54eaae,
+    type: 3}
   MoveSpeed: 4
   MaxDist: 5
   MinDist: 5
