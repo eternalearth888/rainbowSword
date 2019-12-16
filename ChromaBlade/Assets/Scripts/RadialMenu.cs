@@ -22,10 +22,8 @@ public class RadialMenu : MonoBehaviour
             float xPos = Mathf.Sin(theta);
             float yPos = Mathf.Cos(theta);
 
+            // put them in position around the circle
             newButton.transform.localPosition = new Vector3(xPos, yPos, 0f) * 150f;
-
-            // set the color to what you have it set in unity
-            newButton.circle.color = obj.options[i].color;
 
             // set the sprite you want to have in unity
             newButton.icon.sprite = obj.options[i].sprite;

@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 6544083532768804036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6544083533016022889}
   m_Father: {fileID: 0}
@@ -60,13 +60,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 9700c00c9f2034b6d805ee1dc15dec44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -89,9 +87,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3aea4b59b7b42e3b9c7ddc82e67a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 6544083532768804039}
   icon: {fileID: 6544083533016022890}
   title: 
+  myMenu: {fileID: 0}
 --- !u!1 &6544083533016022888
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,8 +153,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0a7635e4136fd414789b86372746d912, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
