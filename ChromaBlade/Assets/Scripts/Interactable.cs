@@ -14,9 +14,11 @@ public class Interactable : MonoBehaviour
 
     public Action[] options;
 
-    private void OnMouseDown()
+    void Update()
     {
         // Tell the Canvas to spawn
-        RadialMenuSpawner.ins.SpawnMenu(this);
+        if(Input.GetKeyDown("q")){
+            RadialMenuSpawner.ins.SpawnMenu(this);
+        }
     }
 }

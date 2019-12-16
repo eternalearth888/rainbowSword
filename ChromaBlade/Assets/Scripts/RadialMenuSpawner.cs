@@ -21,9 +21,10 @@ public class RadialMenuSpawner : MonoBehaviour
         // plop it in the middle of the screen
         newMenu.transform.SetParent(transform, false);
         // plop it where the mouse has clicked
-        newMenu.transform.position = Input.mousePosition;
+        //newMenu.transform.position = Input.mousePosition;
 
         newMenu.SpawnButtons(obj);
+        Debug.Log("Radial Menu Spawner");
     }
 
 }
