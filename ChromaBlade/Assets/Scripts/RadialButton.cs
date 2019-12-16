@@ -6,26 +6,26 @@ using UnityEngine.EventSystems;
 
 public class RadialButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Image circle;
+   
     public Image icon;
     public string title;
 
-    // which cirlce is selected?
+    // which crystal is selected?
     public RadialMenu myMenu;
 
-    // color for selection
-    Color defaultColor;
+    Vector3 defaultScale;
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         myMenu.selected = this;
-        defaultColor = circle.color;
-        circle.color = Color.white;
+        defaultScale = icon.transform.localScale;
+        icon.transform.localScale = defaultScale * 2;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         myMenu.selected = null;
-        circle.color = defaultColor;
+        icon.transform.localScale = defaultScale;
     }
 }
