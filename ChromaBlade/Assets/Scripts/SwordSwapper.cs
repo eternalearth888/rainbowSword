@@ -27,9 +27,9 @@ public class SwordSwapper : MonoBehaviour
     void Start()
     {
         //starts the game with a black sword
-        newSword = Instantiate(prefabs[6], transform.position, Quaternion.identity) as GameObject;
-        swordParent = GameObject.Find("Sword");
-        newSword.transform.parent = swordParent.transform;
+        //newSword = Instantiate(prefabs[6], transform.position, Quaternion.identity) as GameObject;
+        // swordParent = GameObject.Find("Sword");
+        // newSword.transform.parent = swordParent.transform;
         prevSel = selectedSword;
     }
 

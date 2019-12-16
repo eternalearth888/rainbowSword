@@ -36,7 +36,6 @@ public class RadialMenu : MonoBehaviour
             // selected option
             newButton.myMenu = this;
         }
-        Debug.Log("Button Spawner");
     }
 
     void Update()
@@ -44,7 +43,6 @@ public class RadialMenu : MonoBehaviour
         if (Input.GetKeyUp("q"))
         {
             //PUT BUTTON ACTIONS IN HERE IF THEY DESELECT ON AN OPTION
-            Debug.Log("Q released");
             if (selected)
             {
                 Debug.Log(selected.title + " was selected");

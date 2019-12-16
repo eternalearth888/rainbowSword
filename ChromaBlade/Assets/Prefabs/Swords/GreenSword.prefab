@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6035251144517148053}
   - component: {fileID: 6032933235150136205}
   - component: {fileID: 6024876610910642971}
+  - component: {fileID: 5822470179378634431}
   m_Layer: 0
   m_Name: GreenSword
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5822470179378634431
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037676412522010421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42668682, y: 1.7367148, z: 0.09593992}
+  m_Center: {x: 0, y: 0.6614344, z: 0.000000013038516}
 --- !u!1 &6037700987148119031
 GameObject:
   m_ObjectHideFlags: 0

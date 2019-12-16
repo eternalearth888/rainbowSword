@@ -4764,6 +4764,7 @@ GameObject:
   - component: {fileID: 502281050632982099}
   - component: {fileID: 468578683671605323}
   - component: {fileID: 478886102706827485}
+  - component: {fileID: -7963633131405426345}
   m_Layer: 0
   m_Name: YellowSword
   m_TagString: Untagged
@@ -4834,6 +4835,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &-7963633131405426345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500976743053804787}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42668682, y: 1.7367148, z: 0.09593992}
+  m_Center: {x: 0, y: 0.6614344, z: 0.000000013038516}
 --- !u!1 &501038422755685097
 GameObject:
   m_ObjectHideFlags: 0

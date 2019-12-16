@@ -24,7 +24,6 @@ public class RadialMenuSpawner : MonoBehaviour
         //newMenu.transform.position = Input.mousePosition;
 
         newMenu.SpawnButtons(obj);
-        Debug.Log("Radial Menu Spawner");
     }
 
 }
