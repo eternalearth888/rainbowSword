@@ -14279,6 +14279,7 @@ GameObject:
   - component: {fileID: 3500738032192014401}
   - component: {fileID: 3525705606087456345}
   - component: {fileID: 3515115698530875087}
+  - component: {fileID: 3074874196562953323}
   m_Layer: 0
   m_Name: RedSword
   m_TagString: Untagged
@@ -14295,7 +14296,7 @@ Transform:
   m_GameObject: {fileID: 3503440920778801889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3497834777355699541}
   - {fileID: 3500773078218248455}
@@ -14349,3 +14350,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3074874196562953323
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503440920778801889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.42668682, y: 1.7367148, z: 0.09593992}
+  m_Center: {x: 0, y: 0.6614344, z: 0.000000013038516}
