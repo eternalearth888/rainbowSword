@@ -15,7 +15,9 @@ public class PlayerController : MonoBehaviour
     public static bool isAttacking = false;
     private float attackTimer = 1f;
 
-    
+    public GameObject projectile;
+    private float projTimer = 1f;
+
     
     // Start is called before the first frame update
     void Start()
@@ -69,7 +71,10 @@ public class PlayerController : MonoBehaviour
                 isAttacking = false;
             }
         }
+
         attackTimer -= Time.deltaTime;
+        projTimer -= Time.deltaTime;
+        
         lastPos = currentPos;
     }
 
@@ -88,6 +93,7 @@ public class PlayerController : MonoBehaviour
         if(SwordSwapper.selectedSword == 2){
             anim.CrossFade("2Hand-Sword-Attack3", 0);
             isAttacking = true;
+            PlayerStats.yellowAttacking = true;
             attackTimer = 1.2f;
         }
         if(SwordSwapper.selectedSword == 3){
@@ -104,6 +110,11 @@ public class PlayerController : MonoBehaviour
             anim.CrossFade("2Hand-Sword-Attack5", 0);
             isAttacking = true;
             attackTimer = 1.2f;
+            if(projTimer <= 0){
+                Vector3 spot = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
+                Instantiate(projectile, spot, transform.rotation);
+                projTimer = 1;
+            }
         }
     }
 

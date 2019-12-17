@@ -11,28 +11,46 @@ public class PlayerStats : MonoBehaviour
 
     public Image currentHealthBar;
 
+    public static bool yellowAttacking;
+    private float yellowTimer = 1.2f;
+
+    public static bool crystalDeath;
+
     
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-		UpdateHealthBar();
+        yellowAttacking = false;
+        crystalDeath = false;
     }
 
     // Update is called once per frame
-    void UpdateHealthBar()
+    void Update()
     {
 		float healthRatio = currentHealth / maxHealth;
 		currentHealthBar.rectTransform.localScale = new Vector3(healthRatio,1,1);
+        if(yellowAttacking){
+            yellowTimer -= Time.deltaTime;
+            if(yellowTimer <= 0){
+                yellowAttacking = false;
+                yellowTimer = 1.2f;
+            }
+        }
+        if(crystalDeath){
+            currentHealth = maxHealth;
+            crystalDeath = false;
+        }
     }
 
     public void TakeDamage(float taken){
-        currentHealth -= taken;
+        if(!yellowAttacking){
+            currentHealth -= taken;
+        }
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene("LoseScene");
         }
-        UpdateHealthBar();
     }
 
     public void RestoreHealth(float restored){
@@ -40,6 +58,5 @@ public class PlayerStats : MonoBehaviour
         if(currentHealth > maxHealth){
             currentHealth = maxHealth;
         }
-        UpdateHealthBar();
     }
 }

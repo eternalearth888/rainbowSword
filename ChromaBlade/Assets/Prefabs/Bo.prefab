@@ -2492,6 +2492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   camera: {fileID: 1489594412671217093}
+  projectile: {fileID: 7852227247420107217, guid: fd79aa45836f38f46937253a0ddb4124,
+    type: 3}
 --- !u!114 &1489594412139649979
 MonoBehaviour:
   m_ObjectHideFlags: 0

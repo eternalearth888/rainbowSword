@@ -27,7 +27,8 @@ public class GuardianBehavior : MonoBehaviour
     private float currentHealth;
     private bool isPoisoned = false;
     private float poisonTick;
-
+    private float freezeTimer = 5f;
+    private bool isFrozen = false;
     
     
     // Start is called before the first frame update
@@ -47,6 +48,17 @@ public class GuardianBehavior : MonoBehaviour
 
         if(Vector3.Distance(transform.position, playerPos) > aggro){
             return;
+        }
+        
+        //handles Blue sword's freezing
+        if(isFrozen){
+            if(freezeTimer <= 5f && freezeTimer > 0f){
+                freezeTimer -= Time.deltaTime;
+                return;
+            }
+            if(freezeTimer <= 0){
+                isFrozen = false;
+            }
         }
 
         if(Vector3.Distance(transform.position, playerPos) >= MinDist){
@@ -113,12 +125,13 @@ public class GuardianBehavior : MonoBehaviour
         Debug.Log("taking damage");
         //Red sword damage
         if(SwordSwapper.selectedSword == 0){
-            currentHealth -= 50;
+            currentHealth -= 100;
+            playerObj.GetComponent<PlayerStats>().TakeDamage(10f);
             //damage the player as well
         }
         //Orange sword damage
         else if(SwordSwapper.selectedSword == 1){
-            currentHealth -= 10;
+            currentHealth -= 15;
         }
         //Yellow Sword Damage
         else if(SwordSwapper.selectedSword == 2){
@@ -133,13 +146,15 @@ public class GuardianBehavior : MonoBehaviour
         //Blue sword damage
         else if(SwordSwapper.selectedSword == 4){
             currentHealth -= 10;
+            isFrozen = true;
         }
         //Purple sword damage
         else{
-            currentHealth -= 12.5f;
+            currentHealth -= 25f;
         }
         //death case
         if(currentHealth <= 0){
+            PlayerStats.crystalDeath = true;
             Destroy(gameObject);
         }
     }
