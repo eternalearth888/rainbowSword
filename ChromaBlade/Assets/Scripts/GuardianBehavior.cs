@@ -10,6 +10,7 @@ public class GuardianBehavior : MonoBehaviour
     public float MaxDist;
     public float MinDist;
     public float aggro = 50f;
+    public float attDamage = 10f;
     private Animator anim;
     
     private float attackCooldown = 4f;
@@ -147,11 +148,7 @@ public class GuardianBehavior : MonoBehaviour
         //make attack attempt here
         if(Vector3.Distance(transform.position, playerPos) <= hitRange){
             // call damage functions in PlayerStats here
-            
+            playerObj.GetComponent<PlayerStats>().TakeDamage(attDamage);
         }
-        // else{
-        //     // "miss" case, remove this else statement if not needed
-        // }
-        
     }
 }
