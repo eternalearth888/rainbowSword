@@ -1155,8 +1155,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 200
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7599048747840110229, guid: 2710a8fb531f0194991724e788726dfd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2710a8fb531f0194991724e788726dfd, type: 3}
+--- !u!1 &1405532991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6079057701399963431, guid: 2710a8fb531f0194991724e788726dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405532990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1405532992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405532991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d94ac0336c0d4480abf8a3f481581b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4630308922926669249, guid: a209fa60f3f17b9469ba0d81141e34e7, type: 3}
+  - {fileID: 4630308922926669249, guid: bceeb18bd2f007a42a9816f1884570c6, type: 3}
+  - {fileID: 4630308922926669249, guid: ca5a7f58855bd3a4d83616c97aa1989e, type: 3}
+  - {fileID: 4630308922926669249, guid: 6661c130949442c4189d06dc90727aed, type: 3}
+  - {fileID: 4630308922926669249, guid: 94b2eadf385b9104c8cd30dcc88ab1f6, type: 3}
+  - {fileID: 4630308922926669249, guid: e3b9cf567d3916446908670ffbad6f3e, type: 3}
 --- !u!1 &1939878338
 GameObject:
   m_ObjectHideFlags: 0
