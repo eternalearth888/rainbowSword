@@ -18,7 +18,7 @@ public class SwordSwapper : MonoBehaviour
     public GameObject[] prefabs;
     private GameObject newSword;
     
-    public static int selectedSword = 6;
+    public static int selectedSword = 0;
     private int prevSel;
 
     private GameObject swordParent;
@@ -27,10 +27,11 @@ public class SwordSwapper : MonoBehaviour
     void Start()
     {
         //starts the game with a black sword
-        //newSword = Instantiate(prefabs[6], transform.position, Quaternion.identity) as GameObject;
+        // newSword = Instantiate(prefabs[6], transform.position, Quaternion.identity) as GameObject;
         // swordParent = GameObject.Find("Sword");
         // newSword.transform.parent = swordParent.transform;
         prevSel = selectedSword;
+        swapper();
     }
 
     // Update is called once per frame
@@ -70,6 +71,9 @@ public class SwordSwapper : MonoBehaviour
             Destroy(newSword);
             newSword = Instantiate(prefabs[5], transform.position, Quaternion.identity) as GameObject;
         }
+        // else{
+        //     newSword = Instantiate(prefabs[6], transform.position, Quaternion.identity) as GameObject;
+        // }
         
         swordParent = GameObject.Find("Sword");
         newSword.transform.parent = swordParent.transform;

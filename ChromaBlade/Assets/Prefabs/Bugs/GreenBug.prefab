@@ -855,9 +855,11 @@ MonoBehaviour:
   MaxDist: 5
   MinDist: 5
   aggro: 50
+  attDamage: 10
   attackDelay: 4
   hitRange: 5
   maxHealth: 100
+  poison: {fileID: 8326667632765312351, guid: 1101faa4497d905488dcd94e3a6857d1, type: 3}
 --- !u!136 &2908961930136304079
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class EnemyBehavior : MonoBehaviour
     private float poisonTick;
     private float freezeTimer = 5f;
     private bool isFrozen = false;
+    public GameObject poison;
     
     
     // Start is called before the first frame update
@@ -75,6 +76,7 @@ public class EnemyBehavior : MonoBehaviour
         if(isPoisoned){
             currentHealth -= 2.5f;
             poisonTick -= Time.deltaTime;
+            Instantiate(poison, transform.position, Quaternion.identity);
             if(poisonTick <= 0){
                 isPoisoned = false;
             }
@@ -104,7 +106,7 @@ public class EnemyBehavior : MonoBehaviour
         //Red sword damage
         if(SwordSwapper.selectedSword == 0){
             currentHealth -= 100;
-            playerObj.GetComponent<PlayerStats>().TakeDamage(10f);
+            playerObj.GetComponent<PlayerStats>().TakeDamage(5f);
             //damage the player as well
         }
         //Orange sword damage

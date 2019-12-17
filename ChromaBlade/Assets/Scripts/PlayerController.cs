@@ -18,6 +18,13 @@ public class PlayerController : MonoBehaviour
     public GameObject projectile;
     private float projTimer = 1f;
 
+    public GameObject shield;
+
+    //sounds
+    public AudioClip redSwing;
+    public AudioClip orangeSwing;
+    public AudioClip genSwing;
+
     
     // Start is called before the first frame update
     void Start()
@@ -35,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         float yRot = camera.transform.eulerAngles.y;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRot, transform.eulerAngles.z);
-        
+
         //handles idle vs running animations
         if(currentPos != lastPos){
             anim.SetBool("Moving", true);
@@ -80,42 +87,59 @@ public class PlayerController : MonoBehaviour
 
     void SwordSwing(){
         
+        AudioSource audio = GetComponent<AudioSource>();
+
         if(SwordSwapper.selectedSword == 0){
             anim.CrossFade("2Hand-Sword-Attack2", 0);
             isAttacking = true;
             attackTimer = 1.6f;
+            audio.clip = redSwing;
+            audio.PlayDelayed(0.5f);
         }
         if(SwordSwapper.selectedSword == 1){
             anim.CrossFade("2Hand-Sword-Attack1", 0);
             isAttacking = true;
             attackTimer = 0.3f;
+            audio.clip = orangeSwing;
+            audio.Play();
         }
         if(SwordSwapper.selectedSword == 2){
             anim.CrossFade("2Hand-Sword-Attack3", 0);
             isAttacking = true;
             PlayerStats.yellowAttacking = true;
             attackTimer = 1.2f;
+            audio.clip = genSwing;
+            audio.PlayDelayed(0.3f);
+            Vector3 shieldLoc = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            Instantiate(shield, shieldLoc, Quaternion.identity);
         }
         if(SwordSwapper.selectedSword == 3){
             anim.CrossFade("2Hand-Sword-Attack6", 0);
             isAttacking = true;
             attackTimer = 1.2f;
+            audio.clip = genSwing;
+            audio.PlayDelayed(0.3f);
         }
         if(SwordSwapper.selectedSword == 4){
             anim.CrossFade("2Hand-Sword-Attack4", 0);
             isAttacking = true;
             attackTimer = 1.2f;
+            audio.clip = genSwing;
+            audio.PlayDelayed(0.3f);
         }
         if(SwordSwapper.selectedSword == 5){
             anim.CrossFade("2Hand-Sword-Attack5", 0);
             isAttacking = true;
             attackTimer = 1.2f;
+            audio.clip = genSwing;
+            audio.PlayDelayed(0.3f);
             if(projTimer <= 0){
                 Vector3 spot = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
                 Instantiate(projectile, spot, transform.rotation);
                 projTimer = 1;
             }
         }
+
     }
 
     void FootL(){

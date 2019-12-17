@@ -680,13 +680,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5ef7ceb4054304a81d04e9e67ae502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 1489205041637245975, guid: 3bfe405578625b948a3745a5bb54eaae,
-    type: 3}
   MoveSpeed: 4
   MaxDist: 5
   MinDist: 5
+  aggro: 50
+  attDamage: 10
   attackDelay: 4
   hitRange: 6
+  maxHealth: 500
+  poison: {fileID: 8326667632765312351, guid: 1101faa4497d905488dcd94e3a6857d1, type: 3}
 --- !u!54 &6711126865044634438
 Rigidbody:
   m_ObjectHideFlags: 0

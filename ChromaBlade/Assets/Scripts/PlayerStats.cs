@@ -49,6 +49,7 @@ public class PlayerStats : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("LoseScene");
         }
     }

@@ -29,6 +29,7 @@ public class GuardianBehavior : MonoBehaviour
     private float poisonTick;
     private float freezeTimer = 5f;
     private bool isFrozen = false;
+    public GameObject poison;
     
     
     // Start is called before the first frame update
@@ -104,6 +105,7 @@ public class GuardianBehavior : MonoBehaviour
         attackCooldown += Time.deltaTime;
 
         if(isPoisoned){
+            Instantiate(poison, transform.position, Quaternion.identity);
             currentHealth -= 0.05f;
             poisonTick -= Time.deltaTime;
             if(poisonTick <= 0){
@@ -126,7 +128,7 @@ public class GuardianBehavior : MonoBehaviour
         //Red sword damage
         if(SwordSwapper.selectedSword == 0){
             currentHealth -= 100;
-            playerObj.GetComponent<PlayerStats>().TakeDamage(10f);
+            playerObj.GetComponent<PlayerStats>().TakeDamage(5f);
             //damage the player as well
         }
         //Orange sword damage

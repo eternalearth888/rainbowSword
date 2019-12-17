@@ -693,6 +693,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4630308922926669249, guid: a209fa60f3f17b9469ba0d81141e34e7,
+        type: 3}
+      propertyPath: m_Name
+      value: RedGuardian
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630308922926669249, guid: a209fa60f3f17b9469ba0d81141e34e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4630308922926322721, guid: a209fa60f3f17b9469ba0d81141e34e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -748,21 +758,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4630308922926669249, guid: a209fa60f3f17b9469ba0d81141e34e7,
-        type: 3}
-      propertyPath: m_Name
-      value: RedGuardian
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630308922926669249, guid: a209fa60f3f17b9469ba0d81141e34e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4630308922610661084, guid: a209fa60f3f17b9469ba0d81141e34e7,
         type: 3}
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 1867116032211620}
+    - target: {fileID: 4630308922610661084, guid: a209fa60f3f17b9469ba0d81141e34e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630308922610661084, guid: a209fa60f3f17b9469ba0d81141e34e7,
+        type: 3}
+      propertyPath: poison
+      value: 
+      objectReference: {fileID: 8326667632765312351, guid: 1101faa4497d905488dcd94e3a6857d1,
+        type: 3}
     - target: {fileID: 4630308922929883569, guid: a209fa60f3f17b9469ba0d81141e34e7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -777,6 +788,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7459532287386724018, guid: cbea5d38859917048b30c7952a4600bb,
+        type: 3}
+      propertyPath: m_Name
+      value: RedBug
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459532287386724018, guid: cbea5d38859917048b30c7952a4600bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7462004863932840288, guid: cbea5d38859917048b30c7952a4600bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,21 +853,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7459532287386724018, guid: cbea5d38859917048b30c7952a4600bb,
-        type: 3}
-      propertyPath: m_Name
-      value: RedBug
-      objectReference: {fileID: 0}
-    - target: {fileID: 7459532287386724018, guid: cbea5d38859917048b30c7952a4600bb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7458409094087520984, guid: cbea5d38859917048b30c7952a4600bb,
         type: 3}
       propertyPath: playerObj
       value: 
       objectReference: {fileID: 1867116032211620}
+    - target: {fileID: 7458409094087520984, guid: cbea5d38859917048b30c7952a4600bb,
+        type: 3}
+      propertyPath: poison
+      value: 
+      objectReference: {fileID: 8326667632765312351, guid: 1101faa4497d905488dcd94e3a6857d1,
+        type: 3}
     - target: {fileID: 8551434174329419266, guid: cbea5d38859917048b30c7952a4600bb,
         type: 3}
       propertyPath: m_IsTrigger
