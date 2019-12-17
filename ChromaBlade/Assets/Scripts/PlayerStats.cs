@@ -9,7 +9,6 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth = 100;
 	public float currentHealth;
 
-	public Text ratioText;
     public Image currentHealthBar;
 
     
@@ -25,7 +24,6 @@ public class PlayerStats : MonoBehaviour
     {
 		float healthRatio = currentHealth / maxHealth;
 		currentHealthBar.rectTransform.localScale = new Vector3(healthRatio,1,1);
-		ratioText.text = (healthRatio * 100).ToString() + "%";
     }
 
     public void TakeDamage(float taken){
