@@ -684,6 +684,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1489594411726726578, guid: 3bfe405578625b948a3745a5bb54eaae,
+        type: 3}
+      propertyPath: options.Array.data[4].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: abbd789dd93261647aab537e75e885ef,
+        type: 3}
+    - target: {fileID: 1489594411726726578, guid: 3bfe405578625b948a3745a5bb54eaae,
+        type: 3}
+      propertyPath: options.Array.data[3].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5019f549c35e6d043b2d847c3e0c70e8,
+        type: 3}
+    - target: {fileID: 1489594411726726578, guid: 3bfe405578625b948a3745a5bb54eaae,
+        type: 3}
+      propertyPath: options.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1402d46b1ad61b64fb315b770ed911a5,
+        type: 3}
+    - target: {fileID: 1489594411726726578, guid: 3bfe405578625b948a3745a5bb54eaae,
+        type: 3}
+      propertyPath: options.Array.data[5].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d68f01723905919438757222d52a226b,
+        type: 3}
+    - target: {fileID: 1489594411726726578, guid: 3bfe405578625b948a3745a5bb54eaae,
+        type: 3}
+      propertyPath: options.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 152984f8dd7be94459ff6d438c8a8ef7,
+        type: 3}
+    - target: {fileID: 1489594411726726578, guid: 3bfe405578625b948a3745a5bb54eaae,
+        type: 3}
+      propertyPath: options.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 030b5320efdc0294da2addf3195f7b62,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bfe405578625b948a3745a5bb54eaae, type: 3}
 --- !u!1001 &4630308922834310587
@@ -701,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 4630308922926669249, guid: a209fa60f3f17b9469ba0d81141e34e7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4630308922926322721, guid: a209fa60f3f17b9469ba0d81141e34e7,
         type: 3}
@@ -785,7 +821,7 @@ PrefabInstance:
     - target: {fileID: 7459532287386724018, guid: cbea5d38859917048b30c7952a4600bb,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7462004863932840288, guid: cbea5d38859917048b30c7952a4600bb,
         type: 3}

@@ -20,12 +20,19 @@ public class GuardianBehavior : MonoBehaviour
     private float spinTime = 5f;
     private float spinAttackDelay = 1f;
 
+    // Guardian Stats
+    public float maxHealth = 500;
+    private float currentHealth;
+    private bool isPoisoned = false;
+    private float poisonTick;
+
     
     
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -76,6 +83,59 @@ public class GuardianBehavior : MonoBehaviour
             }
         }
         attackCooldown += Time.deltaTime;
+
+        if(isPoisoned){
+            currentHealth -= 0.05f;
+            poisonTick -= Time.deltaTime;
+            if(poisonTick <= 0){
+                isPoisoned = false;
+            }
+        }
+        Debug.Log(currentHealth);
+    }
+
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.tag == "Sword"){
+            if(PlayerController.isAttacking){
+                TakeDamage();
+                PlayerController.isAttacking = false;
+            } 
+        }
+    }
+
+    void TakeDamage(){
+        Debug.Log("taking damage");
+        //Red sword damage
+        if(SwordSwapper.selectedSword == 0){
+            currentHealth -= 50;
+            //damage the player as well
+        }
+        //Orange sword damage
+        else if(SwordSwapper.selectedSword == 1){
+            currentHealth -= 10;
+        }
+        //Yellow Sword Damage
+        else if(SwordSwapper.selectedSword == 2){
+            currentHealth -= 25;
+        }
+        //Green Sword Damage
+        else if(SwordSwapper.selectedSword == 3){
+            currentHealth -= 10f;
+            isPoisoned = true;
+            poisonTick = 4f;
+        }
+        //Blue sword damage
+        else if(SwordSwapper.selectedSword == 4){
+            currentHealth -= 10;
+        }
+        //Purple sword damage
+        else{
+            currentHealth -= 12.5f;
+        }
+        //death case
+        if(currentHealth <= 0){
+            Destroy(gameObject);
+        }
     }
 
     void Attack(){
