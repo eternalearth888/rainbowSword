@@ -91,7 +91,6 @@ public class GuardianBehavior : MonoBehaviour
                 isPoisoned = false;
             }
         }
-        Debug.Log(currentHealth);
     }
 
     private void OnTriggerEnter(Collider other){

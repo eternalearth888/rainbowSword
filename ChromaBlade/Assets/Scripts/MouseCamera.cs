@@ -15,6 +15,11 @@ public class MouseCamera : MonoBehaviour
       void Start () {
           offset = new Vector3(player.position.x, player.position.y + yOff, player.position.z + zOff);
           height = new Vector3(10, 0, 0);
+
+          offset = Quaternion.AngleAxis (Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
+          transform.position = player.position + offset; 
+          transform.LookAt(player.position);
+          transform.rotation *= Quaternion.Euler(-20, 0, 0);
       }
   
       void LateUpdate()
