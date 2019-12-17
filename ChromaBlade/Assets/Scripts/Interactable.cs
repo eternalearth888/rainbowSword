@@ -13,11 +13,6 @@ public class Interactable : MonoBehaviour
 
     public Action[] options;
 
-    private void Start()
-    {
-        // all sprites will be at full opacity
-        //SpriteRenderer.color = new Color(1, 1, 1, 1);
-    }
 
     void Update()
     {
