@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GuardianBehavior : MonoBehaviour
 {
-    public GameObject playerObj;
+    private GameObject playerObj;
     private Vector3 playerPos;
     public float MoveSpeed;
     public float MaxDist;
     public float MinDist;
+    public float aggro = 50f;
     private Animator anim;
     
     private float attackCooldown = 4f;
@@ -32,6 +33,7 @@ public class GuardianBehavior : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        playerObj = GameObject.Find("Bo");
         currentHealth = maxHealth;
     }
 
@@ -41,6 +43,10 @@ public class GuardianBehavior : MonoBehaviour
         attackRand = Random.value;
         playerPos = playerObj.transform.position;
         transform.LookAt(playerPos);
+
+        if(Vector3.Distance(transform.position, playerPos) > aggro){
+            return;
+        }
 
         if(Vector3.Distance(transform.position, playerPos) >= MinDist){
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;

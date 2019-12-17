@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public GameObject playerObj;
+    private GameObject playerObj;
     private Vector3 playerPos;
     public float MoveSpeed;
     public float MaxDist;
     public float MinDist;
+    public float aggro = 20f;
+    public float attDamage = 10f;
     private Animator anim;
     
     private float attackCooldown = 4f;
@@ -25,6 +27,7 @@ public class EnemyBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerObj = GameObject.Find("Bo");
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
@@ -34,6 +37,9 @@ public class EnemyBehavior : MonoBehaviour
     {
         playerPos = playerObj.transform.position;
         transform.LookAt(playerPos);
+        if(Vector3.Distance(transform.position, playerPos) >= aggro){
+            return;
+        }
 
         if(Vector3.Distance(transform.position, playerPos) >= MinDist){
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
@@ -66,12 +72,9 @@ public class EnemyBehavior : MonoBehaviour
         //make attack attempt here
         if(Vector3.Distance(transform.position, playerPos) <= hitRange){
             // call damage functions in PlayerStats here
-            
+            //PlayerStats.TakeDamage(attDamage);
+            playerObj.GetComponent<PlayerStats>().TakeDamage(attDamage);
         }
-        // else{
-        //     // "miss" case, remove this else statement if not needed
-        // }
-        
     }
 
     private void OnTriggerEnter(Collider other){
